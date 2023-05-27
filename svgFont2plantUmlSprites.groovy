@@ -1,18 +1,19 @@
 #!/usr/bin/env groovy
 
-@Grab('net.sourceforge.plantuml:plantuml:1.2017.16')
-@Grab('org.apache.xmlgraphics:batik-transcoder:1.9.1')
-@Grab('org.apache.xmlgraphics:batik-codec:1.9.1')
+@Grab('net.sourceforge.plantuml:plantuml:1.2023.8')
+@Grab('org.apache.xmlgraphics:batik-transcoder:1.16')
+@Grab('org.apache.xmlgraphics:batik-codec:1.16')
 
-import groovy.util.XmlSlurper
+import groovy.cli.commons.CliBuilder
+import groovy.xml.XmlSlurper
 import groovy.xml.MarkupBuilder
 import java.awt.AlphaComposite
 import java.awt.Color
 import java.awt.Graphics2D
 import java.awt.image.BufferedImage
 import javax.imageio.ImageIO
-import net.sourceforge.plantuml.ugraphic.sprite.SpriteGrayLevel
-import net.sourceforge.plantuml.ugraphic.sprite.SpriteUtils
+import net.sourceforge.plantuml.klimt.sprite.SpriteGrayLevel
+import net.sourceforge.plantuml.klimt.sprite.SpriteUtils
 import org.apache.batik.transcoder.image.PNGTranscoder
 import org.apache.batik.transcoder.TranscoderInput
 import org.apache.batik.transcoder.TranscoderOutput
